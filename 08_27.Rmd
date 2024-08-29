@@ -1,0 +1,59 @@
+---
+title: "Demo"
+output:
+  html_document:
+    number_sections: yes
+date: "2024-08-27"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# R Markdown
+
+```{r, include=FALSE}
+auburn_university <- 2
+```
+
+<!-- This document is for class purposes. -->
+
+This is an example text. More specifically an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see [Google](https://google.com). We may need to include some values in the output: we can use some inline code as follows where we mention Auburn University `r auburn_university`. Or we can add statistics on the data, where the average speed is `r mean(cars$speed)*auburn_university`.
+
+When you click the *Knit* button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars, eval = F}
+summary(cars) # this code gives an overview of the dataset
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(cars)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+# Equations
+
+You can include inline equations as follows $\alpha = 4$. But you can also create blocks of equations: 
+
+$$\sum \alpha \pm \beta $$
+
+# Loading Data
+
+The following command loads data from my desktop:
+
+```{r}
+rob <- read.csv("adult.csv", row.names=1, sep=";")
+```
+
+Another option is to open a window for the user to select the data. The user should copy-paste this code into their console in R:
+
+```{r, eval=F}
+rob <- read.csv(file.choose(), row.names=1, sep=";")
+```
+
+If you want to use the above code, you can download the data from the following link: <https://www.kaggle.com/datasets/wenruliu/adult-income-dataset>.
