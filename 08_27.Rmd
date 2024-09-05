@@ -13,7 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # R Markdown
 
 ```{r, include=FALSE}
-auburn_university <- 2
+auburn_university <- 4
 ```
 
 <!-- This document is for class purposes. -->
